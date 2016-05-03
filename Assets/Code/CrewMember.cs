@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CrewMember : MonoBehaviour
 {
 
 	#region member variables
 
-	int m_happiness; //goes from 5 to 0; if this is 0, this guy will mutiny
-	string m_name;
+	public string m_name;
+	public int m_happiness; //goes from 5 to 0; if this is 0, this guy will mutiny
+	public bool m_mutining = false;
 	Controller controller;
-	bool m_mutining = false;
 
 	#endregion
 
 	void Start ()
 	{
 		//get a random name
-		string[] randomNames = {"Barry", "Philip", "David", "Ava", "Sandy", "Janet", "Chris", "Daria"};
+		string[] randomNames = {"Barry", "Philip", "David", "Ava", "Sandy", "Janet", "Chris", "Daria", "Oliver"};
 		m_name = randomNames[Random.Range(0, randomNames.Length)];
+		m_happiness = 3;
 		controller = FindObjectOfType (typeof(Controller)) as Controller;
 	}
 	

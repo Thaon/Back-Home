@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ShipAnimationHandler : MonoBehaviour {
 
@@ -14,9 +13,8 @@ public class ShipAnimationHandler : MonoBehaviour {
 
 	public void PlayArrivalAnimation()
 	{
-		RetroPlanet planet = FindObjectOfType (typeof(RetroPlanet)) as RetroPlanet;
-		planet.GenerateAsset ();
 		GetComponent<Animator> ().SetBool("Fly", false);
+		GameObject.Find("Controller").GetComponent<Controller>().CompleteJump();
 		GameObject.Find ("Starfield").GetComponent<Animator> ().SetBool ("Fly", false);
 	}
 

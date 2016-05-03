@@ -28,7 +28,7 @@ public class RetroPlanet : PixelAsset {
         //set up random color
         Color32 color = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
         highlightColor = color;
-        print(color.r + " " + color.g + " " + color.b);
+        //print(color.r + " " + color.g + " " + color.b);
         GetHighlight light = FindObjectOfType(typeof(GetHighlight)) as GetHighlight;
         light.m_lightColor = color;
         light.ChangeColor();

@@ -30,39 +30,40 @@ public class Planet : MonoBehaviour {
 		m_associatedPlanet = FindObjectOfType (typeof(RetroPlanet)) as RetroPlanet;
 
 		int resouresAmount = m_associatedPlanet.radius;
+		print(m_associatedPlanet.radius);
 
 		if (resouresAmount >= 32 && resouresAmount < 63) //low resources planet
 		{
-			m_fuelPrice[0] = Random.Range(0,0);
-			m_fuelPrice[1] = Random.Range(0,m_fuelPrice[0]); //max amount for selling is always lower than the buying
+			m_fuelPrice[0] = Random.Range(3,7);
+			//m_fuelPrice[1] = Random.Range(0,m_fuelPrice[0]); //max amount for selling is always lower than the buying
 
-			m_scrapPrice[0] = Random.Range(0,0);
-			m_scrapPrice[1] = Random.Range(0,m_scrapPrice[0]); //max amount for selling is always lower than the buying
+			//m_scrapPrice[0] = Random.Range(0,0);
+			//m_scrapPrice[1] = Random.Range(0,m_scrapPrice[0]); //max amount for selling is always lower than the buying
 
-			m_foodPrice[0] = Random.Range(0,0);
-			m_foodPrice[1] = Random.Range(0,m_foodPrice[0]); //max amount for selling is always lower than the buying
+			m_foodPrice[0] = Random.Range(3,6);
+			//m_foodPrice[1] = Random.Range(0,m_foodPrice[0]); //max amount for selling is always lower than the buying
 		}
 		else if (resouresAmount >= 64 && resouresAmount <= 95) //medium resources planet
 		{
-			m_fuelPrice[0] = Random.Range(0,0);
-			m_fuelPrice[1] = Random.Range(0,m_fuelPrice[0]); //max amount for selling is always lower than the buying
+			m_fuelPrice[0] = Random.Range(2,6);
+			//m_fuelPrice[1] = Random.Range(0,m_fuelPrice[0]); //max amount for selling is always lower than the buying
 
-			m_scrapPrice[0] = Random.Range(0,0);
-			m_scrapPrice[1] = Random.Range(0,m_scrapPrice[0]); //max amount for selling is always lower than the buying
+			//m_scrapPrice[0] = Random.Range(0,0);
+			//m_scrapPrice[1] = Random.Range(0,m_scrapPrice[0]); //max amount for selling is always lower than the buying
 
-			m_foodPrice[0] = Random.Range(0,0);
-			m_foodPrice[1] = Random.Range(0,m_foodPrice[0]); //max amount for selling is always lower than the buying
+			m_foodPrice[0] = Random.Range(2,5);
+			//m_foodPrice[1] = Random.Range(0,m_foodPrice[0]); //max amount for selling is always lower than the buying
 		}
 		else if (resouresAmount > 96 && resouresAmount <= 128) //high resources planet
 		{
-			m_fuelPrice[0] = Random.Range(0,0);
-			m_fuelPrice[1] = Random.Range(0,m_fuelPrice[0]); //max amount for selling is always lower than the buying
+			m_fuelPrice[0] = Random.Range(1,5);
+			//m_fuelPrice[1] = Random.Range(0,m_fuelPrice[0]); //max amount for selling is always lower than the buying
 
-			m_scrapPrice[0] = Random.Range(0,0);
-			m_scrapPrice[1] = Random.Range(0,m_scrapPrice[0]); //max amount for selling is always lower than the buying
+			//m_scrapPrice[0] = Random.Range(0,0);
+			//m_scrapPrice[1] = Random.Range(0,m_scrapPrice[0]); //max amount for selling is always lower than the buying
 
-			m_foodPrice[0] = Random.Range(0,0);
-			m_foodPrice[1] = Random.Range(0,m_foodPrice[0]); //max amount for selling is always lower than the buying
+			m_foodPrice[0] = Random.Range(1,4);
+			//m_foodPrice[1] = Random.Range(0,m_foodPrice[0]); //max amount for selling is always lower than the buying
 		}
 	}
 
