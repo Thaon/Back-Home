@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
+                                
 public enum GameState {planet, pirates, wreck, trader}; //used to check what will be displayed on arrival
 
 public class Controller : MonoBehaviour {
