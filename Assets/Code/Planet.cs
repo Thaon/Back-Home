@@ -30,7 +30,7 @@ public class Planet : MonoBehaviour {
 		m_associatedPlanet = FindObjectOfType (typeof(RetroPlanet)) as RetroPlanet;
 
 		int resouresAmount = m_associatedPlanet.radius;
-		print(m_associatedPlanet.radius);
+		//print(m_associatedPlanet.radius);
 
 		if (resouresAmount >= 32 && resouresAmount < 63) //low resources planet
 		{

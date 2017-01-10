@@ -173,7 +173,7 @@ public class Controller : MonoBehaviour {
 	public void CompleteJump()
 	{
 		int ran = Random.Range(0, 1); //we decide here the chances to get into a specific state
-		print(ran);
+		//print(ran);
 		
 		m_planet.GetComponent<SpriteRenderer>().enabled = false;
 		m_pirates.SetActive(false);

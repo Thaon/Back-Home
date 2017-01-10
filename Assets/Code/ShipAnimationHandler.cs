@@ -14,7 +14,7 @@ public class ShipAnimationHandler : MonoBehaviour {
 	public void PlayArrivalAnimation()
 	{
 		GetComponent<Animator> ().SetBool("Fly", false);
-		GameObject.Find("Controller").GetComponent<Controller>().CompleteJump();
+		GameObject.Find("Controller").GetComponent<PersistentData>().CompleteJump();
 		GameObject.Find ("Starfield").GetComponent<Animator> ().SetBool ("Fly", false);
 	}
 
