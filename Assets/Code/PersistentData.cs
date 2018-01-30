@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class PersistentData : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class PersistentData : MonoBehaviour {
     private GameObject m_planet;
     private int m_counter = 0;
 
-    public GameObject[] m_flowcharts;
+    public List<string> m_stories;
 
     #endregion
 
@@ -18,8 +19,6 @@ public class PersistentData : MonoBehaviour {
         m_planet = GameObject.FindWithTag("Planet");
 
         m_planet.GetComponent<Planet>().Generate();
-
-        m_flowcharts[m_counter].SetActive(true);
     }
 
     void Update ()
@@ -29,9 +28,7 @@ public class PersistentData : MonoBehaviour {
 
     void AdvanceStory()
     {
-        m_flowcharts[m_counter].SetActive(false);
         m_counter++;
-        m_flowcharts[m_counter].SetActive(true);
     }
 
     public void JumpBTNPressed()
@@ -48,7 +45,7 @@ public class PersistentData : MonoBehaviour {
 
     public void CompleteJump()
     {
-        if (m_counter < m_flowcharts.Length)
+        if (m_counter < m_stories.Count)
         {
             m_planet.GetComponent<SpriteRenderer>().enabled = false;
             m_planet.GetComponent<SpriteRenderer>().enabled = true;
